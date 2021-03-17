@@ -1,0 +1,2 @@
+class Stressor < ApplicationRecord
+end
