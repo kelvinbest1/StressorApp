@@ -3,26 +3,30 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
-
-    render json: @users
-  end
+    users = User.all
+    render json: users
+end
 
   # GET /users/1
   def show
-    render json: @user
-  end
+    user = User.find_by(id: params[:id])
+    render json: user
+end
+
 
   # POST /users
   def create
-    @user = User.new(user_params)
+    # binding.pry
+     user = User.find_by(name: params[:users][:name])
+     if user == nil
+         user = User.create(user_params)
+         user.save
+         render json: user
+     else
+         redirect_to "users/#{user.id}"
+     end
+ end
 
-    if @user.save
-      render json: @user, status: :created, location: @user
-    else
-      render json: @user.errors, status: :unprocessable_entity
-    end
-  end
 
   # PATCH/PUT /users/1
   def update
@@ -39,11 +43,7 @@ class UsersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_user
-      @user = User.find(params[:id])
-    end
-
+   
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:name)
