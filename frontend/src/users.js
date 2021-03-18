@@ -31,5 +31,8 @@ class User {
                     personalStressor.renderStressors();
                 }
             }
-        
+        })
+        Stressor.newStressor(this.id);
+    }
+}
     
