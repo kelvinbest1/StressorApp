@@ -31,3 +31,26 @@ class FetchCalls {
         let json = resp.json();
         return await json;
     }
+}
+
+
+  //this will create a new stressor
+  async createStressor(e, userid){
+    const resp = await fetch(this.stressorURL, {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(
+        {
+          goals: {
+            title: e.target.children[0].value,
+            completed: false,
+            user_id: userid
+          }
+        })
+    })
+    let json = resp.json();
+    return await json;
+  }
