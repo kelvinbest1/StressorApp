@@ -3,8 +3,8 @@ class StressorsController < ApplicationController
 
   # GET /stressors
   def index
-    goals = Goal.all
-    render json: goals
+    goals = Stressor.all
+    render json: stressors
 end
 
   # GET /stressors/1
@@ -25,17 +25,19 @@ end
 
   # PATCH/PUT /stressors/1
   def update
-    if @stressor.update(stressor_params)
-      render json: @stressor
-    else
-      render json: @stressor.errors, status: :unprocessable_entity
-    end
-  end
+    #binding.pry
+    goal = Stressor.find(params[:id]).update(stressor_params)
+    render json: stressor
+end
+
 
   # DELETE /stressors/1
   def destroy
-    @stressor.destroy
-  end
+    #binding.pry
+    stressor = Stressor.find(params[:id]).destroy
+    render json: goal
+end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
