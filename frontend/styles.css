@@ -1,3 +1,10 @@
 body {
     background-color: rgb(255, 240, 247);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu56nBlbtPlHnH7rv9H1yaK1I0rfLMCjJ00w&usqp=CAU");
+    
+
+    /* Center and scale the image nicely */
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
