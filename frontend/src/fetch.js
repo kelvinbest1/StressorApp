@@ -2,7 +2,7 @@ class FetchCalls {
     constructor () {
     this.baseURL = "http://localhost:3000/"
     this.userURL = `${this.baseURL}/users`
-    this.goalURL = `${this.baseURL}/goals`
+    this.goalURL = `${this.baseURL}/stressors`
     }
 
 
@@ -23,4 +23,11 @@ class FetchCalls {
       })
       let json = resp.json();
       return await json;
+    }
+
+      //this will get all the stressors in the database
+      async getAllStressors(){
+        const resp = await fetch(this.stressorURL);
+        let json = resp.json();
+        return await json;
     }
