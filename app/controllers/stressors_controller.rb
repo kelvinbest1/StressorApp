@@ -3,10 +3,9 @@ class StressorsController < ApplicationController
 
   # GET /stressors
   def index
-    @stressors = Stressor.all
-
-    render json: @stressors
-  end
+    goals = Goal.all
+    render json: goals
+end
 
   # GET /stressors/1
   def show
