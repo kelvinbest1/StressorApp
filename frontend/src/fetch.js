@@ -46,7 +46,7 @@ class FetchCalls {
         {
           goals: {
             title: e.target.children[0].value,
-            completed: false,
+            overcamed: false,
             user_id: userid
           }
         })
@@ -60,4 +60,24 @@ class FetchCalls {
     fetch(`${this.stressorURL}/${e.target.id}`, {
     method: "DELETE"
 })
+}
+
+ //This will overcome a stressor
+ async overcameStressor(e){
+    const resp = await fetch(`${this.stressorURL}/${e.target.id}`, {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify(
+        {
+          goals: {
+            overcamed: true
+          }
+        })
+    })
+    let json = resp.json(); 
+    return await json;
+  }
 }
