@@ -18,3 +18,13 @@ class Stressor {
         stressorp.innerText = this.name;
         stressorp.id = `t${this.id}`;
         stressorcontainer.appendChild(stressorp);
+        if (this.overcamed == true) {
+            let overcameStressor = document.getElementById(`t${this.id}`);
+            let overcamed = overcameStressor.innerText.strike();
+            document.getElementById(`t${this.id}`).innerHTML = overcamed;
+        } else {
+            this.renderOvercamed();
+        }
+        this.renderDelete();
+    }
+
