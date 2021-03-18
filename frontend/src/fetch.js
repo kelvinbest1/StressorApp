@@ -31,7 +31,7 @@ class FetchCalls {
         let json = resp.json();
         return await json;
     }
-}
+
 
 
   //this will create a new stressor
@@ -54,3 +54,10 @@ class FetchCalls {
     let json = resp.json();
     return await json;
   }
+
+   //This will delete a stressor
+   async deleteStressor(e) {
+    fetch(`${this.stressorURL}/${e.target.id}`, {
+    method: "DELETE"
+})
+}
