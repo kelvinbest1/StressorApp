@@ -28,3 +28,11 @@ class Stressor {
         this.renderDelete();
     }
 
+    //This will render the overcamed button
+    renderOvercamed(){
+        let stressorcontainer = document.querySelector(".stressors-container");
+        let userstressorform = document.createElement('form');
+        let overcamedbtn = document.createElement('BUTTON');
+        overcamedbtn.innerText = "Overcame";
+        overcamedbtn.id = `overcame`;
+
