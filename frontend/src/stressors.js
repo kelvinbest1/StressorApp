@@ -103,4 +103,11 @@ class Stressor {
         e.target.remove();
     }
 
+     //This will delete the stressor when delete button gets pressed
+     async deleteStressor(e){
+        e.preventDefault();
+        let completed = document.getElementById(`${e.target.id}`);
+        let goalText = document.getElementById(`t${e.target.id}`);
+        fetchCall.deleteStressor(e);
+
 
