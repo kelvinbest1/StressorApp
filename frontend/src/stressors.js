@@ -41,4 +41,11 @@ class Stressor {
         userstressorform.addEventListener('submit', this.overcameStressor.bind(this));  
     }
 
+     //This will render the overcamed button
+     renderDelete(){
+        let stressorcontainer = document.querySelector(".stressors-container");
+        let userstressorform = document.createElement('form');
+        let deletebtn = document.createElement('BUTTON');
+        deletebtn.innerText = "Delete";
+
 
