@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show, :update, :destroy]
 
   # GET /users
@@ -48,6 +48,6 @@ end
    
      #Only allow a list of trusted parameters through.
     def user_params
-      params.fetch(:user).permit(:name)
+      params.require(:user).permit(:name)
     end
 end

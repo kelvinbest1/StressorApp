@@ -1,4 +1,4 @@
-class StressorsController < ApplicationController
+class Api::V1::StressorsController < ApplicationController
   before_action :set_stressor, only: [:show, :update, :destroy]
 
   # GET /stressors
