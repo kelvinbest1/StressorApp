@@ -27,19 +27,15 @@ end
     render json: user
 end
 
-
-  
-
-  
-  # DELETE /users/1
-  def destroy
-    @user.destroy
+private
+ 
+   #Only allow a list of trusted parameters through.
+  def user_params
+    params.require(:user).permit(:name)
   end
-
-  private
-   
-     #Only allow a list of trusted parameters through.
-    def user_params
-      params.require(:user).permit(:name)
-    end
 end
+
+  
+
+  
+  
