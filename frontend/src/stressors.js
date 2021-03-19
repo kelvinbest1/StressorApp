@@ -47,5 +47,12 @@ class Stressor {
         let userstressorform = document.createElement('form');
         let deletebtn = document.createElement('BUTTON');
         deletebtn.innerText = "Delete";
+        deletebtn.id = `delete`;
+        userstressorform.appendChild(deletebtn);
+        userstressorform.id = `${this.id}`;
+        stressorcontainer.appendChild(userstressorform);
+        userstressorform.addEventListener('submit', this.deleteStressor.bind(this));   
+    }
+
 
 
