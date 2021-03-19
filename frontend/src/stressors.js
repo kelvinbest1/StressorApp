@@ -86,5 +86,11 @@ class Stressor {
         if (e.target.children[0].value != "") {
             fetchCall.createStressor(e, userid)
             .then(newStressor => {
+                let goals = new Stressor(newStressor);
+                    goals.renderStressors();
+                })
+            } 
+        })
+    }
 
 
