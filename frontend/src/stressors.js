@@ -68,5 +68,8 @@ class Stressor {
         stressorInputter.setAttribute("type", "text");
         stressorInputter.setAttribute("id", "stressor");
         document.getElementById("myForm").appendChild(stressorInputter);
+        let stressorbtn = document.createElement("BUTTON");
+        document.getElementById("myForm").appendChild(stressorbtn);
+        stressorbtn.innerText = "Submit";
 
 
