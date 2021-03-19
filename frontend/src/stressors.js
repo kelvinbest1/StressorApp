@@ -98,5 +98,9 @@ class Stressor {
         e.preventDefault();
         let goalText = document.getElementById(`t${e.target.id}`);
         let overcamed = stressorText.innerText.strike();
+        document.getElementById(`t${e.target.id}`).innerHTML = overcamed;
+        fetchCall.overcomeStressor(e);
+        e.target.remove();
+    }
 
 
