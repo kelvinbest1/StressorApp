@@ -61,5 +61,12 @@ class Stressor {
         let nameinputter = document.getElementById('name-input');
         let namesubmit = document.getElementById('name-submitter');
         let userinputcontainer = document.getElementById('user-inputer-container');
+        let stressorForm = document.createElement("FORM");
+        stressorForm.setAttribute("id", "myForm");
+        userinputcontainer.appendChild(stressorForm);
+        let stressorInputter = document.createElement("INPUT");
+        stressorInputter.setAttribute("type", "text");
+        stressorInputter.setAttribute("id", "stressor");
+        document.getElementById("myForm").appendChild(stressorInputter);
 
 
