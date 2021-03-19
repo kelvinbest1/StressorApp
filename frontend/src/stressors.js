@@ -35,4 +35,10 @@ class Stressor {
         let overcamedbtn = document.createElement('BUTTON');
         overcamedbtn.innerText = "Overcame";
         overcamedbtn.id = `overcame`;
+        userstressorform.appendChild(overcamedbtn);
+        userstressorform.id = `${this.id}`;
+        goalcontainer.appendChild(userstressorform);
+        userstressorform.addEventListener('submit', this.overcameStressor.bind(this));  
+    }
+
 
