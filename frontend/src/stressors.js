@@ -83,5 +83,8 @@ class Stressor {
     let newStressor = document.getElementById('myForm')
     newStressor.addEventListener("submit" , function(e){ 
         e.preventDefault();
+        if (e.target.children[0].value != "") {
+            fetchCall.createStressor(e, userid)
+            .then(newStressor => {
 
 
