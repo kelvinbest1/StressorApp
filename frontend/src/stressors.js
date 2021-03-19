@@ -54,5 +54,12 @@ class Stressor {
         userstressorform.addEventListener('submit', this.deleteStressor.bind(this));   
     }
 
+      //This will render the form to create a new stressor
+      static stressorForm(username){
+        let welcome = document.getElementById('welcome');
+        let question = document.getElementById('name-label');
+        let nameinputter = document.getElementById('name-input');
+        let namesubmit = document.getElementById('name-submitter');
+        let userinputcontainer = document.getElementById('user-inputer-container');
 
 
