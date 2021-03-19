@@ -16,7 +16,7 @@ def create
        user.save
        render json: user
    else
-       redirect_to "users/#{user.id}"
+       redirect_to "/api/v1/users/#{user.id}"
    end
 end
 
