@@ -93,4 +93,10 @@ class Stressor {
         })
     }
 
+    //This will complete the stressor when complete button gets pressed
+    async overcameStressor(e){
+        e.preventDefault();
+        let goalText = document.getElementById(`t${e.target.id}`);
+        let overcamed = stressorText.innerText.strike();
+
 
