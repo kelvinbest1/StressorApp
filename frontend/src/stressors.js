@@ -78,4 +78,10 @@ class Stressor {
     }
 }
 
+ //This will create the new stressor
+ static newStressor(userid){
+    let newStressor = document.getElementById('myForm')
+    newStressor.addEventListener("submit" , function(e){ 
+        e.preventDefault();
+
 

@@ -2,7 +2,7 @@ class FetchCalls {
     constructor () {
     this.baseURL = "http://localhost:3000/"
     this.userURL = `${this.baseURL}/users`
-    this.goalURL = `${this.baseURL}/stressors`
+    this.stressorURL = `${this.baseURL}/stressors`
     }
 
 
@@ -44,7 +44,7 @@ class FetchCalls {
       },
       body: JSON.stringify(
         {
-          goals: {
+          stressors: {
             title: e.target.children[0].value,
             overcamed: false,
             user_id: userid
@@ -72,7 +72,7 @@ class FetchCalls {
       },
       body: JSON.stringify(
         {
-          goals: {
+          stressors: {
             overcamed: true
           }
         })
