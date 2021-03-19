@@ -76,7 +76,7 @@ class Stressor {
         nameinputter.remove();
         namesubmit.remove();
     }
-}
+
 
  //This will create the new stressor
  static newStressor(userid){
@@ -86,8 +86,8 @@ class Stressor {
         if (e.target.children[0].value != "") {
             fetchCall.createStressor(e, userid)
             .then(newStressor => {
-                let goals = new Stressor(newStressor);
-                    goals.renderStressors();
+                let stressors = new Stressor(newStressor);
+                    stressors.renderStressors();
                 })
             } 
         })
@@ -96,7 +96,7 @@ class Stressor {
     //This will complete the stressor when complete button gets pressed
     async overcameStressor(e){
         e.preventDefault();
-        let goalText = document.getElementById(`t${e.target.id}`);
+        let stressorText = document.getElementById(`t${e.target.id}`);
         let overcamed = stressorText.innerText.strike();
         document.getElementById(`t${e.target.id}`).innerHTML = overcamed;
         fetchCall.overcomeStressor(e);
@@ -107,7 +107,12 @@ class Stressor {
      async deleteStressor(e){
         e.preventDefault();
         let completed = document.getElementById(`${e.target.id}`);
-        let goalText = document.getElementById(`t${e.target.id}`);
+        let stressorText = document.getElementById(`t${e.target.id}`);
         fetchCall.deleteStressor(e);
+        completed.remove();
+        stressorText.remove();
+        e.target.remove();
+    }
+}
 
 
