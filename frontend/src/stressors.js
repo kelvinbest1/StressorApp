@@ -71,5 +71,11 @@ class Stressor {
         let stressorbtn = document.createElement("BUTTON");
         document.getElementById("myForm").appendChild(stressorbtn);
         stressorbtn.innerText = "Submit";
+        welcome.innerText = `Welcome ${username}!`;
+        question.innerText = "Enter a stressor here:";
+        nameinputter.remove();
+        namesubmit.remove();
+    }
+}
 
 
