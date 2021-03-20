@@ -35,7 +35,7 @@ end
   def destroy
     #binding.pry
     stressor = Stressor.find(params[:id]).destroy
-    render json: goal
+    render json: stressor
 end
 
 

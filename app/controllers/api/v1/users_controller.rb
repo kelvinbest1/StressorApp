@@ -8,13 +8,15 @@ class API::V1::UsersController < ApplicationController
 end
 
 # POST /users
+
 def create
-  # binding.pry
+   #binding.pry
    user = User.find_by(name: params[[:users]:name])
    if user == nil
        user = User.create(user_params)
        user.save
        render json: user
+       byebug
    else
        redirect_to "/api/v1/users/#{user.id}"
    end
