@@ -1,9 +1,9 @@
 class API::V1::StressorsController < ApplicationController
-  before_action :set_stressor, only: [:show, :update, :destroy]
+ 
 
   # GET /stressors
   def index
-    goals = Stressor.all
+    stressors = Stressor.all
     render json: stressors
 end
 
@@ -14,19 +14,15 @@ end
 
   # POST /stressors
   def create
-    @stressor = Stressor.new(stressor_params)
+    stressor = Stressor.create(stressor_params)
+    render json: stressor
+end
 
-    if @stressor.save
-      render json: @stressor, status: :created, location: @stressor
-    else
-      render json: @stressor.errors, status: :unprocessable_entity
-    end
-  end
 
   # PATCH/PUT /stressors/1
   def update
     #binding.pry
-    goal = Stressor.find(params[:id]).update(stressor_params)
+    stressor = Stressor.find(params[:id]).update(stressor_params)
     render json: stressor
 end
 
@@ -47,6 +43,6 @@ end
 
     # Only allow a list of trusted parameters through.
     def stressor_params
-      params.require(:stressor).permit(:name, :conquered, :user_id)
+      params.require(:stressor).permit(:name, :overcamed, :user_id)
     end
 end
