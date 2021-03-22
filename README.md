@@ -12,7 +12,7 @@ Run Bundle Install
 Run rails s (server) within the backend folder
 Open the index.html within the frontend folder
 Usage
-When the user opens the html file, they are greeted with a login. After a user enters their name, their goals complete or uncompeted will show up. The user will be prompted to enter a goal. Once they have, the goal will appear and they will get 2 buttons by the goal (complete and delete). If they user clicks "complete", the goal will update to completed and strike through the text. This will persist between multiple logins. If the user clicks "delete" the goal will be deleted.
+When the user opens the html file, they are greeted with a login. After a user enters their name, their stressors overcamed or not will show up. The user will be prompted to enter a stressor. Once they have, the stressor will appear and they will get 2 buttons by the stressor (complete and delete). If they user clicks "complete", the stressor will update to completed and strike through the text. This will persist between multiple logins. If the user clicks "delete" the stressor will be deleted.
 
 # Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/kelvinbest1/StressorApp.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
