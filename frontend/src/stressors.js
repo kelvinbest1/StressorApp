@@ -8,7 +8,7 @@ class Stressor {
         this.id = stressor.id
         this.overcamed = stressor.overcamed
         this.user_id = stressor.user_id
-        Goal.userStressors.push(stressor)
+        Stressor.userStressors.push(stressor)
     }
 
      //this will render each of the user's stressors
@@ -37,8 +37,8 @@ class Stressor {
         overcamedbtn.id = `overcame`;
         userstressorform.appendChild(overcamedbtn);
         userstressorform.id = `${this.id}`;
-        goalcontainer.appendChild(userstressorform);
-        userstressorform.addEventListener('submit', this.overcameStressor.bind(this));  
+        stressorcontainer.appendChild(userstressorform);
+        userstressorform.addEventListener('submit', this.overcameStressor.bind(this));
     }
 
      //This will render the overcamed button
@@ -51,7 +51,7 @@ class Stressor {
         userstressorform.appendChild(deletebtn);
         userstressorform.id = `${this.id}`;
         stressorcontainer.appendChild(userstressorform);
-        userstressorform.addEventListener('submit', this.deleteStressor.bind(this));   
+        userstressorform.addEventListener('submit', this.deleteStressor.bind(this));
     }
 
       //This will render the form to create a new stressor
@@ -81,7 +81,7 @@ class Stressor {
  //This will create the new stressor
  static newStressor(userid){
     let newStressor = document.getElementById('myForm')
-    newStressor.addEventListener("submit" , function(e){ 
+    newStressor.addEventListener("submit" , function(e){
         e.preventDefault();
         if (e.target.children[0].value != "") {
             fetchCall.createStressor(e, userid)
@@ -89,7 +89,7 @@ class Stressor {
                 let stressors = new Stressor(newStressor);
                     stressors.renderStressors();
                 })
-            } 
+            }
         })
     }
 
@@ -114,5 +114,4 @@ class Stressor {
         e.target.remove();
     }
 }
-
 
