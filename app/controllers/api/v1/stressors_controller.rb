@@ -1,5 +1,5 @@
 class API::V1::StressorsController < ApplicationController
- 
+
   # GET /stressors
   def index
     stressors = Stressor.all
@@ -32,7 +32,7 @@ def stressor_params
 params.require(:stressor).permit(:name, :overcamed, :user_id)
 end
 end
-  
+
 
 
 

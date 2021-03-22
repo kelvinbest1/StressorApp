@@ -9,7 +9,7 @@ end
 # POST /users
 def create
    #binding.pry
-   user = User.find_by(name: params[:users][:name])
+   user = User.find_by(name: params[:user][:name])
    if user == nil
        user = User.create(user_params)
        user.save
