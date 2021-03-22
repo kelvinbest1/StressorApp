@@ -21,4 +21,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/kelvin
 This project is available as open source under the terms of the MIT License.
 
 # Code of Conduct
-Everyone interacting in the Goals project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
+Everyone interacting in the Stressor project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
