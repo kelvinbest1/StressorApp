@@ -22,7 +22,7 @@ class User {
 
     //This will get all the user's stressors and display them
     displayUserStressors(){
-        Goal.stressorForm(this.name);
+        Stressor.stressorForm(this.name);
         fetchCall.getAllStressors()
         .then(stressors => {
             for (let i=0; i < stressors.length; i++){
